@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <title>Attendance Monitoring System</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <style>
+
+    /* CSS placed here for easy copy-paste (separate section below also available) */
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Attendance Monitoring System</h1>
+
+  <div class="rule-banner">
+
+    <strong>Marking rule:</strong>
+
+    <span>Default = <b>Present</b>. Click once → <b>Absent</b>. Click twice → <b>Excused</b>. Click third time → <b>Present</b> again.</span>
+
+  </div>
+
+  <div class="tabs">
+
+    <button id="tabAttendance" class="active">📋 Take Attendance</button>
+
+    <button id="tabRecords">📅 View Records</button>
+
+    <button id="tabClasses">🏫 Manage Classes</button>
+
+  </div>
+
+  <!-- ATTENDANCE PAGE -->
+
+  <div id="attendancePage" class="page">
+
+    <div class="controls">
+
+      <label>Select Class:</label>
+
+      <select id="classDropdown"></select>
+
+      <button id="addClassQuick">➕ Add Class</button>
+
+    </div>
+
+    <div id="dateTime"></div>
+
+    <div class="grid" id="studentGrid"></div>
+
+    <div class="actions">
+
+      <button id="submit">Submit Attendance</button>
+
+      <button id="clearSelection">Reset Selection</button>
+
+    </div>
+
+  </div>
+
+  <!-- RECORDS PAGE -->
+
+  <div id="recordsPage" class="page" style="display:none;">
+
+    <div class="controls">
+
+      <label>Select Class:</label>
+
+      <select id="recordClassDropdown"></select>
+
+    </div>
+
+    <div class="cal-nav">
+
+      <button id="prevMonth">⬅️</button>
+
+      <h2 id="monthYear"></h2>
+
+      <button id="nextMonth">➡️</button>
+
+    </div>
+
+    <div class="calendar-grid" id="calendarGrid"></div>
+
+    <div id="recordDetails"></div>
+
+  </div>
+
+  <!-- CLASSES PAGE -->
+
+  <div id="classesPage" class="page" style="display:none;">
+
+    <h2>Class Manager</h2>
+
+    <button id="openAddClass">➕ Add New Class</button>
+
+    <ul id="classList"></ul>
+
+  </div>
+
+  <!-- MODAL -->
+
+  <div id="modal" class="modal" style="display:none;">
+
+    <div class="modal-content">
+
+      <h3 id="modalTitle">Add / Edit Class</h3>
+
+      <label>Class Name</label>
+
+      <input type="text" id="classNameInput" placeholder="e.g. ICT 1A" />
+
+      <label>Student Names (comma separated)</label>
+
+      <textarea id="studentNamesInput" placeholder="Santos, Cruz, Reyes"></textarea>
+
+      <div class="modal-actions">
+
+        <button id="saveClassBtn">Save</button>
+
+        <button id="cancelClassBtn">Cancel</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    /* JS placed here for easy copy-paste (separate section below also available) */
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+body {
+
+  font-family: Arial, sans-serif;
+
+  background: #f4f6f8;
+
+  margin: 0;
+
+  color: #222;
+
+  text-align: center;
+
+}
+
+h1 {
+
+  background:#004aad;
+
+  color:white;
+
+  margin:0;
+
+  padding:18px;
+
+}
+
+.rule-banner {
+
+  background:#fff7e6;
+
+  color:#333;
+
+  padding:10px;
+
+  border-bottom:1px solid #eee;
+
+}
+
+.tabs {
+
+  margin:12px 0;
+
+}
+
+.tabs button {
+
+  padding:8px 14px;
+
+  margin:0 6px;
+
+  border:none;
+
+  border-radius:6px;
+
+  background:#d3d3d3;
+
+  cursor:pointer;
+
+}
+
+.tabs button.active { background:#004aad; color:white; }
+
+.page { padding:16px; }
+
+.controls {
+
+  margin:12px 0;
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:10px;
+
+  align-items:center;
+
+}
+
+.controls select { padding:6px 10px; border-radius:6px; border:1px solid #ccc; }
+
+#dateTime { margin:10px 0; color:#333; }
+
+.grid {
+
+  display:grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap:10px;
+
+  width:90%;
+
+  max-width:900px;
+
+  margin:18px auto;
+
+}
+
+button.student {
+
+  padding:14px;
+
+  border-radius:10px;
+
+  border:none;
+
+  font-size:15px;
+
+  cursor:pointer;
+
+  transition:0.15s;
+
+}
+
+.present { background:#4caf50; color:white; }
+
+.absent  { background:#f44336; color:white; }
+
+.excused { background:#2196f3; color:white; }
+
+.actions { margin-top:10px; display:flex; justify-content:center; gap:10px; }
+
+#submit, #clearSelection { padding:10px 18px; border-radius:8px; border:none; background:#004aad; color:white; cursor:pointer; }
+
+.cal-nav { display:flex; justify-content:center; align-items:center; gap:12px; margin-top:10px; }
+
+#monthYear { margin:0; font-size:18px; }
+
+.calendar-grid {
+
+  display:grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  gap:8px;
+
+  width:95%;
+
+  max-width:980px;
+
+  margin:12px auto;
+
+  padding:10px;
+
+  box-sizing:border-box;
+
+}
+
+.calendar-cell {
+
+  min-height:80px;
+
+  background:#fff;
+
+  border-radius:8px;
+
+  padding:8px;
+
+  box-shadow:0 0 4px rgba(0,0,0,0.06);
+
+  text-align:left;
+
+  position:relative;
+
+  cursor:pointer;
+
+}
+
+.calendar-cell .daynum { font-weight:600; margin-bottom:8px; }
+
+.calendar-cell.empty { background:transparent; box-shadow:none; cursor:default; }
+
+.calendar-cell.has-record { border:2px solid #4caf50; }
+
+#recordDetails {
+
+  margin:14px auto;
+
+  padding:12px;
+
+  width:90%;
+
+  max-width:600px;
+
+  background:white;
+
+  border-radius:8px;
+
+  box-shadow:0 0 6px rgba(0,0,0,0.08);
+
+  text-align:left;
+
+}
+
+#classList { list-style:none; padding:0; width:90%; max-width:700px; margin:12px auto; }
+
+#classList li {
+
+  display:flex; justify-content:space-between; align-items:center;
+
+  background:white; padding:10px; margin-bottom:8px; border-radius:8px;
+
+  box-shadow:0 0 4px rgba(0,0,0,0.05);
+
+}
+
+#classList button { margin-left:8px; padding:6px 10px; border:none; border-radius:6px; background:#004aad; color:white; cursor:pointer; }
+
+.modal {
+
+  position:fixed; left:0; top:0; right:0; bottom:0;
+
+  display:flex; align-items:center; justify-content:center;
+
+  background:rgba(0,0,0,0.4);
+
+}
+
+.modal-content { background:white; padding:18px; border-radius:8px; width:90%; max-width:420px; box-sizing:border-box; }
+
+.modal-content input, .modal-content textarea {
+
+  width:100%; padding:8px; margin-top:6px; box-sizing:border-box; border-radius:6px; border:1px solid #ccc;
+
+}
+
+.modal-actions { display:flex; justify-content:flex-end; gap:8px; margin-top:12px; }
+
+.modal-actions button { padding:8px 12px; border-radius:6px; border:none; cursor:pointer; }
